@@ -1,5 +1,6 @@
 <x-layout>
-    <div class="shadow-xl shadow-violet-100 rounded-md container flex items-center justify-between p-4">
+    <div
+        class="shadow-xl sticky top-0 right-0 bg-white shadow-violet-100 rounded-md container flex items-center justify-between p-4">
         <div class="flex left-side gap-3 justif-center items-center">
             <img class="w-10 h-10 rounded-full"
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUJibL4i1RAvkAg6kAkEPX_0ymmcMbLBVixw&s"

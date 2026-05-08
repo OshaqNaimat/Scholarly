@@ -1,45 +1,53 @@
 <x-layout>
     <x-student-navbar />
-    {{-- sidebar --}}
-    <div class="grid"></div>
-    <div class="container">
-        <ul class="">
-            <li
-                class="list-none  my-3 hover:text-white transition hover:bg-violet-500 cursor-pointer flex items-center gap-2 justify-start">
-                <img class="w-10 h-10  " src="https://assignmate.free.nf/images/icons/dashboard.png" alt="">
-                <h3 class="text-xl font-bold">Dashboard</h3>
-            </li>
-            <li
-                class="list-none  my-3 hover:text-white transition hover:bg-violet-500 cursor-pointer flex items-center gap-2 justify-start">
-                <img class="w-10 h-10  " src="https://assignmate.free.nf/images/icons/courses.png" alt="">
-                <h3 class="text-xl font-bold">Classes</h3>
-            </li>
-            <li
-                class="list-none  my-3 hover:text-white transition hover:bg-violet-500 cursor-pointer flex items-center gap-2 justify-start">
-                <img class="w-10 h-10  " src="https://assignmate.free.nf/images/icons/assignments.png" alt="">
-                <h3 class="text-xl font-bold">Tests</h3>
-            </li>
-            <li
-                class="list-none  my-3 hover:text-white transition hover:bg-violet-500 cursor-pointer flex items-center gap-2 justify-start">
-                <img class="w-10 h-10  " src="https://assignmate.free.nf/images/icons/marks.png" alt="">
-                <h3 class="text-xl font-bold">Marks</h3>
-            </li>
-            <li
-                class="list-none  my-3 hover:text-white transition hover:bg-violet-500 cursor-pointer flex items-center gap-2 justify-start">
-                <img class="w-10 h-10  " src="https://assignmate.free.nf/images/icons/attendance.png" alt="">
-                <h3 class="text-xl font-bold">Attendence</h3>
-            </li>
-            <li
-                class="list-none  my-3 hover:text-white transition hover:bg-violet-500 cursor-pointer flex items-center gap-2 justify-start">
-                <img class="w-10 h-10  " src="https://assignmate.free.nf/images/icons/settings.png" alt="">
-                <h3 class="text-xl font-bold">Setting</h3>
-            </li>
-            <li
-                class="list-none  my-3 hover:text-white transition hover:bg-violet-500 cursor-pointer flex items-center gap-2 justify-start">
-                <img class="w-10 h-10  " src="https://cdn-icons-png.flaticon.com/512/4083/4083031.png" alt="">
-                <h3 class="text-xl font-bold">Logout</h3>
-            </li>
-        </ul>
-    </div>
 
+    <div class="grid grid-cols-10">
+        {{-- Sidebar --}}
+        <div class="col-span-2">
+            <x-student-sidebar />
+        </div>
+        <div class="col-span-8 grid grid-cols-8 gap-4 p-4">
+            <div class="col-span-2 bg-yellow-100 rounded-lg">
+                <div class="card container p-4 lesson-card  rounded-lg">
+                    <div class="flex items-center justify-between p-4">
+                        <img class="w-15 h-15" src="https://cdn-icons-png.flaticon.com/256/7342/7342013.png"
+                            alt="">
+                        <img class="w-15 h-15" src="https://cdn-icons-png.flaticon.com/256/10741/10741279.png"
+                            alt="">
+                    </div>
+                    <div class="flex flex-col">
+                        <h4 class="text-xl font-bold ">10</h4>
+                        <h4 class="text-xl font-bold text-zinc-500">Classes</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-2 bg-pink-400 rounded-lg">
+                <div class="card tests-card  p-4 ">
+                    <div class="flex items-center justify-between">
+                        <img class="w-15 h-15" src="https://www.petrianeditingservice.co.uk/images/paraphrase.png"
+                            alt="">
+                        <img class="w-15 h-15"
+                            src="https://images.freeimages.com/fic/images/icons/2660/finance/256/pie_graph.png"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-span-4 text-center shadow-2xl rounded-lg">
+                <div class="card tests-card  p-4 ">
+                    <div class="flex items-center justify-center">
+                        <h4>Latest tasks will appear here </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-4 rounded-md bg-blue-100">
+                <div class="card attendence-card bg-blue-100 p-4 h-10 text-center rounded-lg">
+                    Attendance and Graph
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 </x-layout>
